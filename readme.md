@@ -22,8 +22,8 @@ WHERE `cfu` > 10;
 ```sql
 
 SELECT *
-FROM `courses`
-WHERE `cfu` > 10;
+FROM `students`
+WHERE `date_of_birth` < CURRENT_DATE() - INTERVAL 30 YEAR;
 
 ```
 
