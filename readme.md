@@ -59,6 +59,6 @@ FROM `departments`;
 
 ```sql
 SELECT *
-FROM `courses`
-WHERE `period` LIKE 'i %' AND `year` = 1;
+FROM `teachers`
+WHERE `phone` IS NULL;
 ```1
