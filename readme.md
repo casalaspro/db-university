@@ -35,8 +35,32 @@ WHERE `period` LIKE 'i %' AND `year` = 1;
 
 ## 5. Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020 (21)
 
+```sql
+SELECT *
+FROM `exams`
+WHERE `date` = "2020-01-19" AND HOUR(`hour`) >= '14';
+```
+
 ## 6. Selezionare tutti i corsi di laurea magistrale (38)
+
+```sql
+SELECT *
+FROM `courses`
+WHERE `period` LIKE 'i %' AND `year` = 1;
+```
 
 ## 7. Da quanti dipartimenti è composta l'università? (12)
 
+```sql
+SELECT *
+FROM `courses`
+WHERE `period` LIKE 'i %' AND `year` = 1;
+```
+
 ## 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+
+```sql
+SELECT *
+FROM `courses`
+WHERE `period` LIKE 'i %' AND `year` = 1;
+```1
