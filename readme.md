@@ -96,9 +96,13 @@ SELECT * FROM `courses` INNER JOIN `course_teacher` ON `courses`.`id` = `course_
 ## 4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome
 
 ```sql
-SELECT *
-FROM `teachers`
-WHERE `phone` IS NULL;
+SELECT *, CONCAT_WS(" ", `surname`, `name`) AS 'nome_completo'
+FROM `students`
+INNER JOIN `exam_student`
+ON `students`.`id` = `exam_student`.`student_id`
+INNER JOIN `exams`
+ON `exam_student`.`exam_id` = `exams`.`id`
+ORDER BY `nome_completo` ASC;
 ```
 
 ## 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
