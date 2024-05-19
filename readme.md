@@ -141,3 +141,37 @@ SELECT *
 FROM `teachers`
 WHERE `phone` IS NULL;
 ```
+
+# Query con GROUP BY
+
+## 1. Contare quanti iscritti ci sono stati ogni anno
+
+```sql
+SELECT COUNT(`students`.`id`) AS 'iscritti', YEAR(`students`.`enrolment_date`) AS 'anno'
+FROM `students`
+GROUP BY `anno`;
+```
+
+## 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+
+```sql
+SELECT *
+FROM `teachers`
+WHERE `phone` IS NULL;
+```
+
+## 3. Calcolare la media dei voti di ogni appello d'esame
+
+```sql
+SELECT *
+FROM `teachers`
+WHERE `phone` IS NULL;
+```
+
+## 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+
+```sql
+SELECT *
+FROM `teachers`
+WHERE `phone` IS NULL;
+```
