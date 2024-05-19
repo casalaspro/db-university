@@ -155,9 +155,9 @@ GROUP BY `anno`;
 ## 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
 ```sql
-SELECT *
+SELECT COUNT(*), `teachers`.`office_address`
 FROM `teachers`
-WHERE `phone` IS NULL;
+GROUP BY `teachers`.`office_address`;
 ```
 
 ## 3. Calcolare la media dei voti di ogni appello d'esame
