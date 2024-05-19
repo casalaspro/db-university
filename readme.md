@@ -173,7 +173,6 @@ GROUP BY `exams`.`id`;
 ## 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 
 ```sql
-SELECT *
-FROM `teachers`
-WHERE `phone` IS NULL;
+-- Contare quanti corsi di laurea ci sono per ogni dipartimento
+SELECT `departments`.`name` AS 'dipartimenti', COUNT(`degrees`.`id`) AS 'num_lauree' FROM `departments` INNER JOIN `degrees` ON `departments`.`id` = `degrees`.`department_id` GROUP BY `dipartimenti`;
 ```
